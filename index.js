@@ -24,6 +24,10 @@ app.get("/", (req, res) => {
     res.send("Welcome to Our Online Shop API...");
 });
 
+app.get("/checkout-success", (req, res) => {
+    res.send("Checkout Successfully Done...");
+});
+
 app.get("/products", (req, res) => {
     res.send(products);
 });
