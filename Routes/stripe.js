@@ -87,8 +87,8 @@ router.post('/create-checkout-session', async (req, res) => {
         customer: customer.id,
         line_items,
         mode: 'payment',
-        success_url: `${process.env.CLIENT_URL}/checkout-success`,
-        cancel_url: `${process.env.CLIENT_URL}/cart`,
+        success_url: `https://guarded-springs-69261.herokuapp.com/checkout-success`,
+        cancel_url: `https://guarded-springs-69261.herokuapp.com/cart`,
     });
 
     res.send({ url: session.url });
