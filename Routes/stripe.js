@@ -159,12 +159,12 @@ router.post('/webhook', express.raw({ type: 'application/json' }), (req, res) =>
     res.send().end();
 });
 
-// const webhookEndpoint = stripe.webhookEndpoints.create({
-//     url: 'http://example.com/api/stripe/webhook',
-//     enabled_events: [
-//       'charge.failed',
-//       'charge.succeeded',
-//     ],
-// });
+const webhookEndpoint = stripe.webhookEndpoints.create({
+    url: 'https://guarded-springs-69261.herokuapp.com/api/stripe/webhook',
+    enabled_events: [
+      'charge.failed',
+      'charge.succeeded',
+    ],
+});
 
 module.exports = router;
